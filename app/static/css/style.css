@@ -1,0 +1,78 @@
+/* main.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    background-color: #f5f5f5; /* 設置背景顏色 */
+}
+
+#chat-area {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* 加入邊框 */
+    margin: auto; /* 水平居中 */
+    max-width: 600px; /* 最大寬度 */
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.15); /* 加入陰影 */
+}
+
+#chat-content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* 消息從上方開始顯示 */
+    margin-bottom: 10px;
+}
+
+.message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word; /* 確保長文本不會溢出 */
+    width: fit-content; /* 讓div的寬度適應內容 */
+    margin-bottom: 10px; /* 添加間隔 */
+}
+
+.message.user {
+    background-color: #cccdcd; /* 使用者消息的背景顏色 */
+    align-self: flex-end; /* 使用者消息對齊右邊 */
+}
+
+.message.bot {
+    background-color: #bcd7d2; /* 機器人消息的背景顏色 */
+    align-self: flex-start; /* 機器人消息對齊左邊 */
+}
+
+#input-area {
+    display: flex;
+    padding: 10px 20px;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    background-color: #fff; /* 輸入區背景色 */
+}
+
+#user-input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 18px;
+    outline: none; /* 移除默認聚焦輪廓 */
+}
+
+#send-button {
+    background-color: #1fa195;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    background-color: #17a2b8;
+}
